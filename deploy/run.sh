@@ -11,8 +11,8 @@ main() {
 
 deployConjur() {
   pushd ..
-    git clone --single-branch --branch master \
-        https://github.com/cyberark/kubernetes-conjur-deploy.git \
+    git clone --single-branch --branch tkg \
+        https://github.com/gl-johnson/kubernetes-conjur-deploy.git \
         kubernetes-conjur-deploy-$UNIQUE_TEST_ID
 
     cmd="./start"
