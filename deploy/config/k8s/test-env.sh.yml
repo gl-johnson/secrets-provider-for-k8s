@@ -31,7 +31,7 @@ spec:
     spec:
       serviceAccountName: ${APP_NAMESPACE_NAME}-sa
       containers:
-      - image: '${PULL_DOCKER_REGISTRY_PATH}/${APP_NAMESPACE_NAME}/debian:latest'
+      - image: 'debian:latest'
         name: test-app
         command: ["sleep"]
         args: ["infinity"]
@@ -87,7 +87,7 @@ spec:
                 name: test-k8s-secret-fetch-all-base64
                 key: secrets.encoded
       initContainers:
-      - image: '${PULL_DOCKER_REGISTRY_PATH}/${APP_NAMESPACE_NAME}/secrets-provider:latest'
+      - image: 'cyberark/secrets-provider-for-k8s:latest'
         imagePullPolicy: Always
         name: cyberark-secrets-provider-for-k8s
         env:
