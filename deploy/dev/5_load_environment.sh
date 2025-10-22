@@ -13,8 +13,8 @@ main() {
     setup_helm_environment
 
     create_k8s_secret
-    export IMAGE_PULL_POLICY="Never"
-    export IMAGE="secrets-provider-for-k8s"
+    export IMAGE_PULL_POLICY="Always"
+    export IMAGE="cyberark/secrets-provider-for-k8s"
     export TAG="latest"
     deploy_chart
 
